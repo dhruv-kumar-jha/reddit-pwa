@@ -9,5 +9,3 @@ Tutorial:
 Demo:
 [https://reddit-pwa.firebaseapp.com](https://reddit-pwa.firebaseapp.com)
 
-
-

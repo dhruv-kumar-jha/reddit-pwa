@@ -7,7 +7,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // import all the custom styles
+import 'app/css/reset.css';
 import 'app/css/style.css';
+import 'app/css/helper.css';
+import 'app/css/typography.css';
 
 
 // Needed for onTouchTap
@@ -20,6 +23,9 @@ import DefaultLayout from 'app/ui/layouts/Default';
 import Dashboard from 'app/ui/pages/Dashboard';
 import SubReddit from 'app/ui/pages/SubReddit';
 import Settings from 'app/ui/pages/Settings';
+
+
+import { install } from 'offline-plugin/runtime';
 
 
 // render the component
@@ -43,4 +49,8 @@ render(
 	document.getElementById('root')
 );
 
+
+
+// install the service worker.
+install();
 

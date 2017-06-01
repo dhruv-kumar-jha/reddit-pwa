@@ -6,6 +6,10 @@
 	<title>Reddit PWA</title>
 	<link rel="icon" href="/images/favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="manifest" href="/manifest.json">
+	<meta name="theme-color" content="#00bcd4">
+
 	<!-- place all the generated css files here -->
 	<% for (var css in htmlWebpackPlugin.files.css) { %>
 		<link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
@@ -14,7 +18,12 @@
 <body>
 
 	<div id="root">
-		<p>Loading...</p>
+		<div class="component-loading">
+			<div class="loading">
+				<div class="loading-bar-container"><div class="bar"></div></div>
+				<p class="loading-text">Loading... Please wait.</p>
+			</div>
+		</div>
 	</div>
 
 	<!-- place the generated manifest file here, inline. -->
